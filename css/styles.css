@@ -1,0 +1,217 @@
+:root{
+    --primeryColor:#ff0a4b;
+    --secondColor:#f7bcf7;
+    --lightColor:#ffffff;
+    --bgColor1:#111315;
+    --bgColor2:#151d1d;
+    --padding:8%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--lightColor);
+}
+
+h1{
+    font-size: 2rem;
+    cursor: pointer;
+    letter-spacing: 0,3rem;
+    margin-bottom: 1.5rem;
+}
+h5{
+    color: var(--secondColor);
+    margin-bottom: 1.5rem;
+}
+h4{
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+p{
+    color: var(--secondColor);
+}
+span{
+    color: var(--primeryColor);
+}
+/* **************************** --Home-- */
+.home{
+    background-color: var(--bgColor1);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    padding-top: 2rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li {
+    list-style-type: none;
+    
+}
+nav ul li a{
+    color: var(--lightColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 0.4rem;
+    transition: 0.4s;
+}
+nav ul li a:hover{
+    color: var(--primeryColor);
+}
+.btn{
+    text-decoration: none;
+    color: var(--lightColor);
+    background-color: var(--primeryColor);
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 0.81rem 1.8rem;
+    transition: 0.4s;
+    border:  2px solid transparent;
+    width: max-content;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primeryColor);
+
+}
+.home .content{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .content-texts{
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    position: relative;
+    bottom: 70px;
+}
+.home .social img{
+ width: 2.4rem;  
+margin-left: 1rem;
+margin-top: 2rem;
+transition: 0.4s;
+}
+.home .social img:hover{
+    transform: scale(1.3);
+}
+.home .content-imgs{
+
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.home .content-imgs img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1.3s;
+
+}
+.shape{
+    width: 80%;
+}
+.pic{
+    width: 60%;
+}
+.home .content-imgs:hover .shape{
+    bottom: 40px;
+}
+.home .content-imgs:hover .pic{
+    left: 45%;
+}
+/* **************************** ABOUT SECTION *********** */
+.about{
+    background-color: var(--bgColor2); 
+    padding: 2rem var(--padding);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about .content-img{
+    width: 35%;
+}
+.about .content-img img{
+    width: 90%;
+}
+.about .content-texts{
+    width: 35%;
+}
+/* ****************************** SERVICES SECTION */
+.services{
+    background-color: var(--bgColor1);
+    padding: 2rem var(--padding);
+}
+ .txt-center{  /*item mochtarak*/
+    text-align: center;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.card i{
+    font-size: 2rem;
+    padding-bottom: 1.3rem;
+    color: var(--primeryColor);
+    
+}
+.card{
+    width: 250px;
+    flex-basis: calc(25% - 10rem);  
+    background-color: var(--bgColor2);
+    border-radius: 30px;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+/* **************************** SKILS SECTION */
+
+
+.skils{
+    background-color: var(--bgColor2);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem var(--padding);
+}
+.skils .content{
+    width: 50%;
+
+}
+.skils .content-icon img{
+    background-color: var(--lightColor);
+    border-radius: 50%;
+    width: 15%;
+    padding: 0.3rem 0.3rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.skils .content-img {
+    width: 35%;
+}
+
+.skils .content-img img{
+    width: 90%;
+}
+/* *********************************FOUTER SECTION */
+footer{
+    background-color: var(--bgColor1);
+    padding: 2rem var(--padding);
+}
+footer .conetent-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
