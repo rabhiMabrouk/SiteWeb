@@ -12,17 +12,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+html{
     height: 100%;
     font-family: "Josefin Sans", sans-serif;
     color: var(--lightColor);
 }
-
+#logo{
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
 h1{
     font-size: 2rem;
     cursor: pointer;
     letter-spacing: 0,3rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 2rem;
 }
 h5{
     color: var(--secondColor);
@@ -50,9 +55,14 @@ nav{
     padding-top: 2rem;
     padding-left: var(--padding);
     padding-right: var(--padding);
+    padding-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--bgColor1);
+    width: 100%;
 }
 nav ul li {
     list-style-type: none;
@@ -158,7 +168,7 @@ transition: 0.4s;
 }
 .content-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1rem;
     width: 100%;
     flex-wrap: wrap;
@@ -170,11 +180,10 @@ transition: 0.4s;
     
 }
 .card{
-    width: 250px;
-    flex-basis: calc(25% - 10rem);  
+    width: 250px; 
     background-color: var(--bgColor2);
     border-radius: 30px;
-    padding: 1rem 1rem;
+    padding: 2.5rem 1rem;
     text-align: center;
 }
 /* **************************** SKILS SECTION */
@@ -183,27 +192,37 @@ transition: 0.4s;
 .skils{
     background-color: var(--bgColor2);
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding: 2rem var(--padding);
 }
 .skils .content{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
 .skils .content-icon img{
     background-color: var(--lightColor);
     border-radius: 50%;
-    width: 15%;
-    padding: 0.3rem 0.3rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem;
+}
+.skils .content-icon{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    
+    
 }
 .skils .content-img {
     width: 35%;
 }
 
 .skils .content-img img{
-    width: 90%;
+    width: 100%;
 }
 /* *********************************FOUTER SECTION */
 footer{
@@ -214,4 +233,113 @@ footer .conetent-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* ********************************* MENU BUTTON*/
+#menu{
+    display: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    background:none;
+}
+
+#menu.is-active #s1{
+background-color: aqua;
+transform: translate(0px,8px) rotate(45deg);
+}
+#menu.is-active #s2{
+opacity: 0;
+
+}
+#menu.is-active #s3{
+    background-color: aqua;
+    transform: translate(0px,-8px) rotate(-45deg);
+}
+
+
+
+#menu span{
+    display: block;
+    background-color: var(--lightColor);
+    width: 30px;
+    height: 4px;
+    margin-bottom: 4px;
+    transition: 0.4s;
+}
+/* ********************************* MEDIA QUIREIS */
+@media screen and (max-width:557px){
+    :root{
+        --padding:1.5rem;
+    }
+    html{
+        font-size: 18px;
+    }
+    .home{
+        margin-top: 5rem;
+    }
+    .home .content-imgs{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 0;
+        border-bottom: 2px solid var(--bgColor2);
+    }
+    nav .btn{
+        display: none;
+    }
+    nav ul li{ 
+        display: none;
+        position: fixed;
+        background-color: var(--bgColor2);
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 90%;
+        text-align: center;
+        padding: var(--padding);
+        line-height: 3rem;
+        margin: 2rem;
+    }
+    nav ul li.is-active{
+        display: block;
+    }
+    nav ul li a{
+        display: block;
+    }
+    #menu{
+        display: block;
+    }
+
+    .home .content .btn,.home .content h4{
+        margin-bottom: 2rem;
+    }
+    .home .content h1{
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    .home .content-texts{
+        padding-top: 100px;
+    }
+    .about{
+        display: block;
+    }
+    .about .content-img img{
+        display: none;
+    }
+    .about .content-texts {
+        width: 100%;
+    }
+    .services .card{
+        width: 100%;
+    }
+    .skils .content-img {
+        display: none;
+    }
+    .skils .content {
+        width: 100%;
+    }
 }
