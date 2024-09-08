@@ -11,11 +11,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-margin-top: 90px;
 }
 html{
     height: 100%;
     font-family: "Josefin Sans", sans-serif;
     color: var(--lightColor);
+    scroll-behavior: smooth;
+
 }
 #logo{
     font-weight: bold;
@@ -329,6 +332,7 @@ opacity: 0;
     }
     .about .content-img img{
         display: none;
+        width: 10%;
     }
     .about .content-texts {
         width: 100%;
@@ -336,10 +340,19 @@ opacity: 0;
     .services .card{
         width: 100%;
     }
+    .skils .content-icon {
+        width: 100%;
+    }
+    .skils .content-icon img{
+        width: 3rem;
+    }
     .skils .content-img {
         display: none;
     }
     .skils .content {
         width: 100%;
+    }
+    .scroll-m{
+        scroll-padding-top: 90px;
     }
 }
